@@ -18,10 +18,10 @@ services:
     container_name: task-db
     restart: unless-stopped
     environment:
-      MYSQL_ROOT_PASSWORD: supp0rt
-      MYSQL_DATABASE: task_management
-      MYSQL_USER: root
-      MYSQL_PASSWORD: supp0rt
+      MYSQL_ROOT_PASSWORD: supp0rt        # Required for root user
+      MYSQL_DATABASE: task_management          # Optional: creates a default DB
+      MYSQL_USER: taskuser              # Optional: creates a regular user
+      MYSQL_PASSWORD: supp0rt   
     volumes:
       - dbdata:/var/lib/mysql
     ports:
