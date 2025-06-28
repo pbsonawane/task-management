@@ -10,7 +10,7 @@ A simple Task Management web application built with Laravel, running inside Dock
 - RESTful API structure
 - Dockerized deployment
 - Runs on Apache inside the container
-- Exposes app over host IP (e.g., `http://192.168.1.5:8000`)
+- Exposes app over host IP (e.g., `http://xxx.xxx.xxx.xxx:8000`)
 
 ---
 
@@ -20,7 +20,7 @@ Make sure you have the following installed:
 
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
-- A VM or host with static IP (e.g., `192.168.1.5`)
+- A VM or host with static IP (e.g., `xxx.xxx.xxx.xxx`)
 
 ---
 
