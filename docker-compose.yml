@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: task-app
+    volumes:
+      - .:/var/www/html
+    ports:
+      - "8000:80"
+    depends_on:
+      - db
+
+  db:
+    image: mysql:8
+    container_name: task-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: supp0rt        # Required for root user
+      MYSQL_DATABASE: task_management          # Optional: creates a default DB
+      MYSQL_USER: taskuser              # Optional: creates a regular user
+      MYSQL_PASSWORD: supp0rt   
+    volumes:
+      - dbdata:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+volumes:
+  dbdata:
